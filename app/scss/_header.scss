@@ -1,0 +1,67 @@
+$header-color: #008484;
+$hover-color: #006669;
+$header-color-text: white;
+.header{
+	background:  $header-color;
+	.logo{
+		color: $header-color-text;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	.nav 
+	{
+		
+		
+		.nav-link{
+			margin: 0;
+			padding: 0;
+		}
+		.nav-item{
+			height: 100%;
+			display: flex;
+			align-items: center;
+		}
+		.nav-item:hover{
+			transition: 0.5s;
+			background-color: #006669;
+		}
+		display: flex;
+		text-align: center;
+		align-items: center;
+		
+		.user-actions{
+			width: 150px;
+			.user-account{
+				width: 150px;
+				.nav-item{
+					width: 100%;
+				}
+				top:40px;	
+				position: absolute;
+				background: $header-color;
+				display: none;
+			}
+		}
+		.user-actions:hover .user-account{
+			display: flex;
+			flex-direction: column;	
+		}
+		.s_user_action{
+			.nav-small-users-actions{
+				position: absolute;
+				background: $header-color;
+				display: none;
+				width: 100%;
+			}
+		}
+		.s_user_action:hover  .nav-small-users-actions {
+			display: block;
+		}
+		
+
+
+	}
+	
+}
+
