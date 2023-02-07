@@ -11,4 +11,5 @@ body{
 	color: #5c5b5b;
 }
 
-@import 'header';
+@import './header/header';
+@import './main_content/main_content';
