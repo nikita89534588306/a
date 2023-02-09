@@ -76,6 +76,7 @@ header{
 
 		.user-select-list{
 			width: 120px;
+			z-index: 10;
 			@media (max-width:767px){
 				width: 100%;
 			}

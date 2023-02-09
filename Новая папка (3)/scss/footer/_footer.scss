@@ -1,0 +1,68 @@
+footer{
+	background-color: #303036;
+	color: #d3d3d3;
+	padding: 10px;
+
+}
+
+footer .description-blog{
+	width: 100%;
+	.header-desc{
+		text-align: center;
+		padding-top: 10px;
+	}
+	.contacts{
+		display: flex;
+		justify-content: space-around;
+	}
+
+
+}
+
+footer .quickLinks{
+height: 100%;
+	margin-top: 10px;
+	.linksList .link{
+		display: inline;
+		margin: 10px;
+		text-decoration: dotted;
+	}
+	@media (min-width:767px){	
+		float: right;
+		width: 48%;
+	}
+}	
+
+footer .feedback{
+
+	.text-input,
+	.input-email{
+		background:  #303036;
+		border: 2px solid silver;
+		color: white;
+		&::placeholder{
+			color: white;
+			text-indent: 10px;
+		}
+	}
+	.input-email{
+		display: block;
+		width: 100%;
+		margin-bottom: 5px;
+	}
+	.text-input{
+		width: 100%;
+
+	}
+	.contact-btn{
+		width: 100%;
+		display: block;
+		color: white;
+		i::before{
+			margin-right: 10px;
+		}
+	}
+	@media (min-width:767px){	
+		width: 48%;
+	}
+}

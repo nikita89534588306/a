@@ -66,7 +66,8 @@ header {
       display: block;
       padding: 10px; }
     header .navbar .user-select-list {
-      width: 120px; }
+      width: 120px;
+      z-index: 10; }
       @media (max-width: 767px) {
         header .navbar .user-select-list {
           width: 100%; } }
@@ -98,59 +99,137 @@ header {
   border-radius: 20px 20px 0  0; }
 
 .topPost .topPost-carousel img {
+  object-fit: cover;
   width: 100%;
   height: 500px; }
 
-.header {
+.last-posts .header {
   margin: 30px 0;
   text-align: center; }
 
-.last-posts .topic {
+.last-posts .content .topic {
   background-color: #ffffff;
   border: 1px solid silver;
   border-radius: 3px;
   margin-bottom: 10px; }
-  .last-posts .topic .topic-header {
+  @media (min-width: 1023px) {
+    .last-posts .content .topic {
+      float: right;
+      width: 33%; } }
+  .last-posts .content .topic .topic-header {
     text-align: center;
     margin-top: 10px; }
-  .last-posts .topic .list {
+  .last-posts .content .topic .list {
     transition: all 0.3s;
     text-decoration: none;
     font-weight: 500;
     margin: 10px; }
-    .last-posts .topic .list > div {
+    .last-posts .content .topic .list > div {
       border-bottom: 1px solid #e0e0e0; }
-    .last-posts .topic .list .list-item {
+    .last-posts .content .topic .list .list-item {
       color: #5c5b5b;
       width: 100%;
       font-size: 1.2em; }
-    .last-posts .topic .list > div:hover {
+    .last-posts .content .topic .list > div:hover {
       padding-left: 10px;
       transition: all 0.3s; }
 
-.last-posts .post-card {
+@media (min-width: 1023px) {
+  .last-posts .content .posts {
+    width: 66%; } }
+
+.last-posts .content .posts .post-card {
   border: 1px solid silver;
   margin-bottom: 10px;
   border-radius: 3px;
   padding: 10px;
   background: #ffffff; }
-  .last-posts .post-card .img {
+  @media (min-width: 767px) {
+    .last-posts .content .posts .post-card {
+      display: flex;
+      justify-content: space-between; } }
+  .last-posts .content .posts .post-card .img {
     height: 200px; }
-    .last-posts .post-card .img img {
+    @media (min-width: 767px) {
+      .last-posts .content .posts .post-card .img {
+        width: 28%; } }
+    .last-posts .content .posts .post-card .img img {
+      object-fit: cover;
       width: 100%;
       height: 100%;
       border-radius: 3px; }
-  .last-posts .post-card .title {
+  @media (min-width: 767px) {
+    .last-posts .content .posts .post-card .content {
+      width: 70%; } }
+  .last-posts .content .posts .post-card .content .title {
     margin: 20px 0 5px 0;
     text-align: center; }
-    .last-posts .post-card .title a {
+    @media (min-width: 767px) {
+      .last-posts .content .posts .post-card .content .title {
+        margin: 10px 0 10px 0; } }
+    .last-posts .content .posts .post-card .content .title a {
       color: #5c5b5b; }
-  .last-posts .post-card .title:hover {
-    text-decoration: underline;
-    color: #5c5b5b; }
-  .last-posts .post-card .name-author::before,
-  .last-posts .post-card .data-post::before {
+    .last-posts .content .posts .post-card .content .title:hover {
+      text-decoration: underline;
+      color: #5c5b5b; }
+  .last-posts .content .posts .post-card .content .name-author::before,
+  .last-posts .content .posts .post-card .content .data-post::before {
     margin: 0 10px; }
-  .last-posts .post-card .text * {
+  .last-posts .content .posts .post-card .content .text * {
     text-align: justify;
     text-indent: 30px; }
+
+footer {
+  background-color: #303036;
+  color: #d3d3d3;
+  padding: 10px; }
+
+footer .description-blog {
+  width: 100%; }
+  footer .description-blog .header-desc {
+    text-align: center;
+    padding-top: 10px; }
+  footer .description-blog .contacts {
+    display: flex;
+    justify-content: space-around; }
+
+footer .quickLinks {
+  height: 100%;
+  margin-top: 10px; }
+  footer .quickLinks .linksList .link {
+    display: inline;
+    margin: 10px;
+    text-decoration: dotted; }
+  @media (min-width: 767px) {
+    footer .quickLinks {
+      float: right;
+      width: 48%; } }
+
+footer .feedback .text-input,
+footer .feedback .input-email {
+  background: #303036;
+  border: 2px solid silver;
+  color: white; }
+  footer .feedback .text-input::placeholder,
+  footer .feedback .input-email::placeholder {
+    color: white;
+    text-indent: 10px; }
+
+footer .feedback .input-email {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px; }
+
+footer .feedback .text-input {
+  width: 100%; }
+
+footer .feedback .contact-btn {
+  width: 100%;
+  display: block;
+  color: white; }
+  footer .feedback .contact-btn i::before {
+    margin-right: 10px; }
+
+@media (min-width: 767px) {
+  footer .feedback {
+    width: 48%; } }
