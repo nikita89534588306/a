@@ -183,53 +183,86 @@ footer {
   background-color: #303036;
   color: #d3d3d3;
   padding: 10px; }
+  footer .con {
+    width: 80%;
+    margin: 0 auto; }
 
-footer .description-blog {
-  width: 100%; }
-  footer .description-blog .header-desc {
-    text-align: center;
-    padding-top: 10px; }
-  footer .description-blog .contacts {
-    display: flex;
-    justify-content: space-around; }
+footer .description-blog .header-desc {
+  text-align: center;
+  padding-top: 10px; }
+
+footer .description-blog .desc {
+  margin-bottom: 5px; }
+
+footer .description-blog .contacts {
+  display: flex; }
+  footer .description-blog .contacts .contact-phone,
+  footer .description-blog .contacts .email {
+    display: inline; }
+  @media (max-width: 374px), (min-width: 1023px) and (max-width: 1439px) {
+    footer .description-blog .contacts {
+      font-size: 0.9rem; } }
+  @media (max-width: 767px), (min-width: 1023px) and (max-width: 1439px) {
+    footer .description-blog .contacts {
+      display: flex;
+      justify-content: space-around; }
+      footer .description-blog .contacts .contact-phone,
+      footer .description-blog .contacts .email {
+        margin: 5px; } }
+  @media (min-width: 768px) {
+    footer .description-blog .contacts {
+      display: block;
+      float: left; }
+      footer .description-blog .contacts .contact-phone,
+      footer .description-blog .contacts .email {
+        margin: 5px; } }
+
+footer .description-blog .social-links {
+  display: inline; }
+  footer .description-blog .social-links i {
+    margin: 10px; }
+  @media (max-width: 767px), (min-width: 1023px) and (max-width: 1440px) {
+    footer .description-blog .social-links {
+      width: 90%;
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-around;
+      padding: 10px 0px; } }
+  @media (min-width: 768px) and (max-width: 1023px), (min-width: 1441px) {
+    footer .description-blog .social-links {
+      display: flex;
+      justify-content: flex-end; } }
 
 footer .quickLinks {
   height: 100%;
-  margin-top: 10px; }
-  footer .quickLinks .linksList .link {
+  margin: 10px 0; }
+  footer .quickLinks .linksList
+.link {
     display: inline;
     margin: 10px;
-    text-decoration: dotted; }
-  @media (min-width: 767px) {
-    footer .quickLinks {
-      float: right;
-      width: 48%; } }
+    margin: 0 5px;
+    padding: 0; }
 
-footer .feedback .text-input,
-footer .feedback .input-email {
-  background: #303036;
-  border: 2px solid silver;
-  color: white; }
-  footer .feedback .text-input::placeholder,
-  footer .feedback .input-email::placeholder {
-    color: white;
-    text-indent: 10px; }
-
-footer .feedback .input-email {
-  display: block;
-  width: 100%;
-  margin-bottom: 5px; }
-
-footer .feedback .text-input {
-  width: 100%; }
-
-footer .feedback .contact-btn {
-  width: 100%;
-  display: block;
-  color: white; }
-  footer .feedback .contact-btn i::before {
-    margin-right: 10px; }
-
-@media (min-width: 767px) {
-  footer .feedback {
-    width: 48%; } }
+footer .feedback {
+  margin: 10px 0; }
+  footer .feedback .text-input,
+  footer .feedback .input-email {
+    background: #303036;
+    border: 2px solid silver;
+    color: white; }
+    footer .feedback .text-input::placeholder,
+    footer .feedback .input-email::placeholder {
+      color: white;
+      text-indent: 10px; }
+  footer .feedback .input-email {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px; }
+  footer .feedback .text-input {
+    width: 100%; }
+  footer .feedback .contact-btn {
+    width: 100%;
+    display: block;
+    color: white; }
+    footer .feedback .contact-btn i::before {
+      margin-right: 10px; }
