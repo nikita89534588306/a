@@ -11,7 +11,8 @@ body{
 	color: #5c5b5b;
 }
 
-@import './header/header';
-@import './main_content/main_content';
+@import './templates/header/header';
+@import './templates/footer/footer';
 
-@import './footer/footer';
+@import './pages/index/index_styles';
+@import './pages/login/login_styles';
